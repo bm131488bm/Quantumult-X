@@ -31,11 +31,11 @@ const headers = {
     console.log(newslist);
     let desc = newslist.desc;
     let news = newslist.news[0];
-    let title = "🗞【疫情信息概览】";
+    let title = "🚨【今日疫情信息概览】🚨";
     let subtitle = `📅  ${formatTime()}`;
     let detail =
         "\n「全国数据」" +
-        "\n    -新增确诊: " +
+        "\n\n    -新增确诊: " +
         desc.confirmedIncr +
         "\n    -现有确诊: " +
         desc.currentConfirmedCount +
@@ -45,11 +45,11 @@ const headers = {
         desc.curedCount +
         "\n    -死亡: " +
         desc.deadCount +
-        "\n「疫情动态」\n     " +
+        "\n\n「疫情动态」\n\n     " +
         news.title +
-        "\n「动态详情」\n     " +
+        "\n\n「动态详情」\n\n     " +
         news.summary +
-        "\n    发布时间：" +
+        "\n\n    发布时间：" +
         news.pubDateStr;
     $.notify(title, subtitle, detail);
 })()
